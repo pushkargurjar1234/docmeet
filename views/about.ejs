@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Healthcare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: white;
+        }
+
+        .logo {
+            color: #6C5CE7;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            background-color: #EAE8FD;
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6C5CE7;
+        }
+
+        .get-in-touch {
+            background-color: #6C5CE7;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-in-touch:hover {
+            background-color: #5849e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: normal;
+        }
+
+        .about-header span {
+            font-weight: bold;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .about-image img {
+            width: 50%;
+            height: 60%;
+            border-radius: 8px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .vision-header {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .why-choose-us {
+            margin-top: 60px;
+        }
+
+        .why-choose-us h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .why-choose-us span {
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .feature h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .our-team {
+            margin-top: 60px;
+        }
+
+        .our-team h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .get-in-touch {
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-image {
+                max-width: 100%;
+            }
+
+            .features, .team-members {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">DocMeet</a>
+        <div class="nav-links">
+            <a href="/docmeet">Home</a>
+            <a href="/doctors">Doctors</a>
+            <a href="/contactus">Contact</a>
+            <a href="/about">About</a>
+        </div>
+        <a href="#" class="get-in-touch">Get in touch</a>
+    </nav>
+    <div class="container">
+        <div class="about-header">
+            <h1>ABOUT <span>US</span></h1>
+        </div>
+
+        <div class="about-content">
+            <div class="about-image">
+                <img src="/images/smartboy.png" alt="Healthcare Professional 1" style="border-radius: 100%;"  >
+                <img src="/images/khoobsuratladka.jpg" alt="Healthcare Professional 2 " style="border-radius: 100%; height: 50%;">
+            </div>
+            <div class="about-text">
+                <p>Welcome To Prescripto, Your Trusted Partner In Managing Your Healthcare Needs Conveniently And Efficiently. At Prescripto, We Understand The Challenges Individuals Face When It Comes To Scheduling Doctor Appointments And Managing Their Health Records.</p>
+                
+                <p>Prescripto Is Committed To Excellence In Healthcare Technology. We Continuously Strive To Enhance Our Platform, Integrating The Latest Advancements To Improve User Experience And Deliver Superior Service. Whether You're Booking Your First Appointment Or Managing Ongoing Care, Prescripto Is Here To Support You Every Step Of The Way.</p>
+                
+                <div class="vision-header">Our Vision</div>
+                <p>Our Vision At Prescripto Is To Create A Seamless Healthcare Experience For Every User. We Aim To Bridge The Gap Between Patients And Healthcare Providers, Making It Easier For You To Access The Care You Need, When You Need It.</p>
+            </div>
+        </div>
+
+        <div class="why-choose-us">
+            <h2>WHY <span>CHOOSE US</span></h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>EFFICIENCY:</h3>
+                    <p>Streamlined Appointment Scheduling That Fits Into Your Busy Lifestyle.</p>
+                </div>
+                <div class="feature">
+                    <h3>CONVENIENCE:</h3>
+                    <p>Access To A Network Of Trusted Healthcare Professionals In Your Area.</p>
+                </div>
+                <div class="feature">
+                    <h3>PERSONALIZATION:</h3>
+                    <p>Tailored Recommendations And Reminders To Help You Stay On Top Of Your Health.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="our-team">
+            <h2>OUR TEAM</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="Backend Developer">
+                    <h3>John Doe</h3>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="Frontend Developer">
+                    <h3>Jane Smith</h3>
+                    <p>Frontend Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="SQL Developer">
+                    <h3>Mike Johnson</h3>
+                    <p>SQL Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="Database Administrator">
+                    <h3>Emily Brown</h3>
+                    <p>Database Administrator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

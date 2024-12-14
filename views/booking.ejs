@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .booking-container {
+            display: flex;
+            gap: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .doctor-image {
+            width: 200px;
+            height: 200px;
+            background: #6366f1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .doctor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .doctor-info {
+            flex: 1;
+        }
+
+        .doctor-name {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .doctor-name h2 {
+            font-size: 1.5rem;
+            color: #1e293b;
+        }
+
+        .verified-badge {
+            color: #6366f1;
+            font-size: 1.2rem;
+        }
+
+        .credentials {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .experience-badge {
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .about-section {
+            margin-bottom: 16px;
+        }
+
+        .about-header {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .about-text {
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .appointment-fee {
+            color: #64748b;
+        }
+
+        .fee-amount {
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .booking-slots {
+            margin-top: 30px;
+        }
+
+        .booking-slots h3 {
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .days {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .day.active {
+            background: #6366f1;
+            color: white;
+        }
+
+        .day:not(.active) {
+            border: 1px solid #e2e8f0;
+        }
+
+        .day-name {
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+
+        .day-number {
+            font-weight: 600;
+        }
+
+        .time-slots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .time-slot {
+            padding: 8px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .time-slot.active {
+            background: #6366f1;
+            color: white;
+            border-color: #6366f1;
+        }
+
+        .book-btn {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background: #4f46e5;
+        }
+
+        @media (max-width: 768px) {
+            .booking-container {
+                flex-direction: column;
+            }
+
+            .doctor-image {
+                width: 100%;
+                height: 300px;
+            }
+
+            .days {
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: #475569;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #1e293b;
+            outline: none;
+        }
+
+        .form-group input[type="text"]:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
+        }
+
+    </style>
+ </head>
+<body>
+    <div class="booking-container">
+        <div class="doctor-image">
+            <img src="/placeholder.svg" alt="Dr. Richard James">
+        </div>
+        <div class="doctor-info">
+            <div class="doctor-name">
+                <h2>Dr. Richard James</h2>
+                <span class="verified-badge">✓</span>
+                <a href="/appoinment"><button style="background-color: #4f46e5; padding: 6px; color: #e2e8f0; border-radius: 20px; margin-left: 9.5rem;">My Appoiments</button></a>
+            </div>
+            <div class="credentials">
+                <span>MBBS - General Physician</span>
+                <span class="experience-badge">2 Years</span>
+            </div>
+            <div class="about-section">
+                <div class="about-header">About</div>
+                <p class="about-text">
+                    Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, 
+                    early diagnosis, and effective treatment strategies.
+                </p>
+            </div>
+            <div class="appointment-fee">
+                Appointment fee: <span class="fee-amount">$50</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-slots">
+        <h3>Booking slots</h3>
+        <form action="/book-appointment" method="POST">
+            <div class="form-group">
+                <label for="doctorName">Doctor's Name</label>
+                <input type="text" id="doctorName" name="doctorName" value="Dr. Richard James" readonly>
+            </div>
+             <input type="hidden" name="selectedDate" id="selectedDate">
+            <input type="hidden" name="selectedTime" id="selectedTime">
+          
+            <div class="days">
+                <% const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]; %>
+                <% const dates = ["Mon-10", 11, 12, 13, 14, 15, 16]; %>
+                <% for (let i = 0; i < days.length; i++) { %>
+                    <div class="day" onclick="selectDate('<%= dates[i] %>')">
+                        <span class="day-name"><%= days[i] %></span>
+                        <span class="day-number"><%= dates[i] %></span>
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="time-slots">
+                <% const times = ["8:00 am", "8:30 am", "9:00 am", "9:30 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am"]; %>
+                <% times.forEach((time) => { %>
+                    <div class="time-slot" onclick="selectTime('<%= time %>')"><%= time %></div>
+                <% }) %>
+            </div>
+
+            <button type="submit" class="book-btn">Book an appointment</button>
+        </form>
+    </div>
+
+    <script>
+        function selectDate(date) {
+            document.getElementById('selectedDate').value = date;
+            document.querySelectorAll('.day').forEach(day => day.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+
+        function selectTime(time) {
+            document.getElementById('selectedTime').value = time;
+            document.querySelectorAll('.time-slot').forEach(slot => slot.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
