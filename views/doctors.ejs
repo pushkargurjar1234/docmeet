@@ -103,6 +103,7 @@
         }
 
         .sidebar {
+            margin-top: 50px;
             width: 250px;
             flex-shrink: 0;
         }
@@ -139,9 +140,12 @@
         }
 
         .doctors-grid {
+            padding:40px;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
+            /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
+            grid-template-rows: repeat(3, 1fr); 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 100px;
             flex: 1;
         }
 
@@ -150,6 +154,8 @@
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px;
+            
         }
 
         .doctor-card:hover {
@@ -175,6 +181,22 @@
             color: #22c55e;
             font-size: 0.85rem;
             margin-bottom: 8px;
+        }
+
+        .Not-availability{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: red;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+        .Not-availability::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: red;
+            border-radius: 50%;
         }
 
         .availability::before {
@@ -237,96 +259,92 @@
         </aside>
 
         <main class="doctors-grid">
-            <!-- Repeat this block for each doctor -->
+            <!-- card 1 -->
              <a href="/page">
             <div class="doctor-card">
-                <img src="/images/smartboy.png" alt="Dr. Richard James" class="doctor-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jeNfVOdiDR2rEyS-uE3lCbKvD99-4tJXHA&s" alt="Dr. S. K. Goswami
+                " class="doctor-image">
                 <div class="doctor-info">
                     <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
-                    <p class="doctor-specialty">General physician</p>
+                    <h3 class="doctor-name">Dr. S. K. Goswami  </h3>
+                    <p class="doctor-specialty">Cardiologist  </p>
                 </div>
             </div>
              </a>
-            <!-- Repeat 9 more times for other doctors -->
+           <!-- card 2 -->
             <a href="/page2">
                 <div class="doctor-card">
-                    <img src="/placeholder.svg" alt="Dr. Abhishek" class="doctor-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_1TrJTzOEYV4PRqLde4dxUQECPkUh7emfg&s" alt="Dr. Rajendra Prasad Saxena" class="doctor-image">
                     <div class="doctor-info">
                         <div class="availability">Available</div>
-                        <h3 class="doctor-name">Dr. Abhishek Singh Bhadoriya</h3>
-                        <p class="doctor-specialty">All Rounder physician</p>
+                        <h3 class="doctor-name">Dr. Rajendra Prasad Saxena</h3>
+                        <p class="doctor-specialty">General Physician</p>
                     </div>
                 </div>
                  </a>
+
+                 <!-- card 3 -->
+
                  <a href="/page3">
                     <div class="doctor-card">
-                        <img src="/placeholder.svg" alt="Dr. Devesh Prajapati" class="doctor-image">
+                        <img src="https://cdn.hexahealth.com/Image/webp/480x480/1730983051767-84908059.webp" alt="Dr. Shweta Gupta" class="doctor-image">
                         <div class="doctor-info">
                             <div class="availability">Available</div>
-                            <h3 class="doctor-name">Dr. Devesh Prajapati</h3>
-                            <p class="doctor-specialty">Sexual Physican</p>
+                            <h3 class="doctor-name">Dr. Shweta Gupta</h3>
+                            <p class="doctor-specialty"> Dermatologist</p>
                         </div>
                     </div>
+
+                    <!-- card 4 -->
                      </a>
             <div class="doctor-card">
-                <img src="/placeholder.svg" alt="Dr. Richard James" class="doctor-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYRRrotUprxDrFOSt5QwwHur1A4xuWp8E0A&s" alt="Dr. Aruna Yadav" class="doctor-image">
                 <div class="doctor-info">
-                    <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
-                    <p class="doctor-specialty">General physician</p>
+                    <div class="Not-availability"> Not Available</div>
+                    <h3 class="doctor-name">Dr. Aruna Yadav</h3>
+                    <p class="doctor-specialty"> Gynecologist</p>
                 </div>
             </div>
-            <div class="doctor-card">
-                <img src="/placeholder.svg" alt="Dr. Richard James" class="doctor-image">
-                <div class="doctor-info">
-                    <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
-                    <p class="doctor-specialty">General physician</p>
-                </div>
-            </div>
-            <div class="doctor-card">
-                <img src="/placeholder.svg" alt="Dr. Richard James" class="doctor-image">
-                <div class="doctor-info">
-                    <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
-                    <p class="doctor-specialty">General physician</p>
-                </div>
-            </div>
-            <div class="doctor-card">
-                <img src="/placeholder.svg" alt="Dr. Richard James" class="doctor-image">
-                <div class="doctor-info">
-                    <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
-                    <p class="doctor-specialty">General physician</p>
-                </div>
-            </div>
-            <div class="doctor-card">
-                <img src="/placeholder.svg" alt="Dr. Richard James" class="doctor-image">
-                <div class="doctor-info">
-                    <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
-                    <p class="doctor-specialty">General physician</p>
-                </div>
-            </div>
-            <div class="doctor-card">
-                <div class="flex justify-center items-center"> 
-                    <img src="iPhone-14.png" alt="" width="100"></div>
 
-                <div class="doctor-info">
-                    <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
-                    <p class="doctor-specialty">General physician</p>
-                </div>
-            </div>
+            <!-- card 5 -->
             <div class="doctor-card">
-                <img src="/placeholder.svg" alt="Dr. Richard James" class="doctor-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkGqAlm-Wa7liXEPP5WWzDJdqjH_ioXCT48A&s" alt="Dr. Rohit Gupta" class="doctor-image">
+                <div class="doctor-info">
+                    <div class="Not-availability">Not Available</div>
+                    <h3 class="doctor-name">Dr. Rohit Gupta</h3>
+                    <p class="doctor-specialty">Dermatologist</p>
+                </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="doctor-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCM7k8byiZK9s4Wv7uV00rX-P5ZbyVBAQbOA&s" alt="Dr. Pradeep Sharma" class="doctor-image">
                 <div class="doctor-info">
                     <div class="availability">Available</div>
-                    <h3 class="doctor-name">Dr. Richard James</h3>
+                    <h3 class="doctor-name">Dr. Pradeep Sharma</h3>
+                    <p class="doctor-specialty">Neurologist</p>
+                </div>
+            </div>
+            <!-- card 7 -->
+            <div class="doctor-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkELQPo2jKwYZ_Gku5XkKbgisszdfDc5o2bw&s" alt="Dr. Anil Dubey" class="doctor-image">
+                <div class="doctor-info">
+                    <div class="Not-availability">Not Available</div>
+                    <h3 class="doctor-name">Dr. Anil Dubey</h3>
                     <p class="doctor-specialty">General physician</p>
                 </div>
             </div>
+            <!-- card 8 -->
+            <div class="doctor-card">
+                <img src="https://media.istockphoto.com/id/177839842/photo/smiling-doctor-woman-with-arms-crossed.jpg?s=612x612&w=0&k=20&c=infRKfdmTMS8WYFZHF_GPuBpLPszyyXhiP5Er9a50jA=" alt="Dr. Anjali Bansal" class="doctor-image">
+                <div class="doctor-info">
+                    <div class="availability">Available</div>
+                    <h3 class="doctor-name">Dr. Anjali Bansal</h3>
+                    <p class="doctor-specialty">General physician</p>
+                </div>
+            </div>
+            
+            
         </main>
     </div>
 </body>

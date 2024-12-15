@@ -233,28 +233,25 @@
 <body>
     <div class="booking-container">
         <div class="doctor-image">
-            <img src="/placeholder.svg" alt="Dr. Richard James">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jeNfVOdiDR2rEyS-uE3lCbKvD99-4tJXHA&s" alt="Dr. Richard James">
         </div>
         <div class="doctor-info">
             <div class="doctor-name">
-                <h2>Dr. Richard James</h2>
+                <h2>Dr. S. K. Goswami</h2>
                 <span class="verified-badge">✓</span>
                 <a href="/appoinment"><button style="background-color: #4f46e5; padding: 6px; color: #e2e8f0; border-radius: 20px; margin-left: 9.5rem;">My Appoiments</button></a>
             </div>
             <div class="credentials">
-                <span>MBBS - General Physician</span>
-                <span class="experience-badge">2 Years</span>
+                <span>Cardiologist</span>
+                <span class="experience-badge">20+ Years</span>
             </div>
             <div class="about-section">
                 <div class="about-header">About</div>
                 <p class="about-text">
-                    Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, 
-                    early diagnosis, and effective treatment strategies.
+                    Dr. Goswami specializes in managing complex cardiac cases. His goal is to provide affordable and accessible cardiac care with modern techniques.
                 </p>
             </div>
-            <div class="appointment-fee">
-                Appointment fee: <span class="fee-amount">$50</span>
-            </div>
+        
         </div>
     </div>
 
@@ -263,14 +260,14 @@
         <form action="/book-appointment" method="POST">
             <div class="form-group">
                 <label for="doctorName">Doctor's Name</label>
-                <input type="text" id="doctorName" name="doctorName" value="Dr. Richard James" readonly>
+                <input type="text" id="doctorName" name="doctorName" value="Dr. S. K. Goswami" readonly>
             </div>
              <input type="hidden" name="selectedDate" id="selectedDate">
             <input type="hidden" name="selectedTime" id="selectedTime">
           
             <div class="days">
                 <% const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]; %>
-                <% const dates = ["Mon-10", 11, 12, 13, 14, 15, 16]; %>
+                <% const dates = ["17", 18, 19, 20, 21, 22, 23]; %>
                 <% for (let i = 0; i < days.length; i++) { %>
                     <div class="day" onclick="selectDate('<%= dates[i] %>')">
                         <span class="day-name"><%= days[i] %></span>

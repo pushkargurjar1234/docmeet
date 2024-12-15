@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '123',
+    password: '1234',
     database: 'docmeet'
 });
 
@@ -43,6 +43,7 @@ app.get('/appoinment', (req, res) => {
 });
 
 app.get('/docmeet', (req, res) => {
+
     res.render('index');
 });
  
@@ -64,9 +65,7 @@ app.post('/book-appointment', (req, res) => {
     db.query(sql, [doctorName, selectedDate, selectedTime], (err, result) => {
         if (err) throw err;
         console.log('Appointment booked:', result);
-        // res.send('Appointment successfully booked!');
-        res.redirect('appoinment')
-        
+         res.redirect('appoinment')
     });
 });
 

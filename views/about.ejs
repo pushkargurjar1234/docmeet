@@ -89,16 +89,16 @@
             align-items: flex-start;
         }
 
-        .about-image {
+    .about-image {
             flex: 1;
             display: flex;
             justify-content: space-between;
-        }
+        } 
 
         .about-image img {
             width: 50%;
-            height: 60%;
-            border-radius: 8px;
+            /* height: 60%; */
+            border-radius: 100%;
         }
 
         .about-text {
@@ -110,16 +110,24 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
+        .platform_text{
+            font-size:1.1rem;
+            
+        }
 
         .vision-header {
-            font-size: 1.2rem;
+            text-align: center;
+            font-size: 2.3rem;
             color: #333;
             margin-bottom: 15px;
             font-weight: bold;
+            margin: 60px 0;
         }
 
         .why-choose-us {
-            margin-top: 60px;
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
         }
 
         .why-choose-us h2 {
@@ -132,14 +140,15 @@
         }
 
         .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
             gap: 30px;
         }
 
         .feature {
             padding: 30px;
-            border: 1px solid #eee;
+            border: 1px solid #797979;
             border-radius: 8px;
         }
 
@@ -156,6 +165,8 @@
 
         .our-team {
             margin-top: 60px;
+            display:flex;
+            flex-direction: column;
         }
 
         .our-team h2 {
@@ -165,9 +176,12 @@
         }
 
         .team-members {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display:flex;
+            justify-content:space-evenly;
+            align-items: center;
+         
             gap: 30px;
+            
         }
 
         .team-member {
@@ -226,7 +240,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" class="logo">DocMeet</a>
+        <a href="/docmeet" class="logo">DocMeet</a>
         <div class="nav-links">
             <a href="/docmeet">Home</a>
             <a href="/doctors">Doctors</a>
@@ -240,64 +254,72 @@
             <h1>ABOUT <span>US</span></h1>
         </div>
 
-        <div class="about-content">
-            <div class="about-image">
-                <img src="/images/smartboy.png" alt="Healthcare Professional 1" style="border-radius: 100%;"  >
-                <img src="/images/khoobsuratladka.jpg" alt="Healthcare Professional 2 " style="border-radius: 100%; height: 50%;">
-            </div>
+         
             <div class="about-text">
-                <p>Welcome To Prescripto, Your Trusted Partner In Managing Your Healthcare Needs Conveniently And Efficiently. At Prescripto, We Understand The Challenges Individuals Face When It Comes To Scheduling Doctor Appointments And Managing Their Health Records.</p>
-                
-                <p>Prescripto Is Committed To Excellence In Healthcare Technology. We Continuously Strive To Enhance Our Platform, Integrating The Latest Advancements To Improve User Experience And Deliver Superior Service. Whether You're Booking Your First Appointment Or Managing Ongoing Care, Prescripto Is Here To Support You Every Step Of The Way.</p>
-                
-                <div class="vision-header">Our Vision</div>
-                <p>Our Vision At Prescripto Is To Create A Seamless Healthcare Experience For Every User. We Aim To Bridge The Gap Between Patients And Healthcare Providers, Making It Easier For You To Access The Care You Need, When You Need It.</p>
-            </div>
-        </div>
+                <p class="platform_text">Welcome to our platform! We are a dedicated team of three passionate individuals—Pushkar Gurjar, Ayush Katiyar, and Subrat Tyagi—working together to transform how healthcare services are accessed and managed. With expertise in frontend development, backend development, and database & UI design, we have built an innovative and user-friendly online platform that connects doctors and patients seamlessly.       
+                <p><b>Subrat Tyagi (Frontend Developer):</b> The creative mind behind the platform's design and user experience. Subrat ensures the interface is smooth, modern, and user-friendly, making it easy for both patients and doctors to navigate.<br>
 
+                    <b>Ayush Katiyar (Backend Developer):</b> The powerhouse managing the platform's core functionality. Ayush ensures all processes, from doctor registrations to appointment bookings, run efficiently and securely behind the scenes.<br>
+                    
+                    <b>Pushkar Gurjar (Database and UI Expert):</b> The foundation of our platform's structure. Pushkar ensures all data is securely stored and effectively managed while contributing to creating intuitive and visually appealing designs.<br>
+                    
+                    Together, we are dedicated to simplifying healthcare access for everyone!   
+                    
+                    
+                    <div class="our-team">
+                        <h2>OUR TEAM</h2>
+                        <div class="team-members">
+                            <div class="team-member">
+                                <img src= "images/smartboy.png" alt="Backend Developer">
+                                <h3>Ayush  Katiyar</h3>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="team-member">
+                                <img src= "images/khoobsuratladka.png" alt="Frontend Developer">
+                                <h3>Subrat Tyagi </h3>
+                                <p>Frontend Developer</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="profile-pic (9).png" alt="SQL Developer">
+                                <h3>Pushkar Gurjar</h3>
+                                <p>SQL Developer</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+
+
+
+                <div class="vision-header">Our Vision</div>
+                <p>Our platform is built to make healthcare more accessible and convenient for everyone. We provide a digital space where doctors can register themselves online by providing details about their qualifications, specialties, and availability. Patients can then explore these profiles, choose a doctor that suits their needs, and book appointments—all from the comfort of their homes.
+
+                    By eliminating the challenges of traditional appointment systems, such as long queues and inefficiency, we aim to bridge the gap between doctors and patients through the power of technology. Our mission is to simplify healthcare access and make the experience as smooth and efficient as possible for both doctors and patients.
+                    
+                    We are committed to continuously improving our platform, keeping user satisfaction at the core of everything we do. Through our work, we strive to create a smarter, faster, and more effective way for people to connect with healthcare professionals.
+                    
+                    Thank you for trusting our platform. Together, we can make healthcare more accessible for everyone!            </div>
+        </div>
+        
         <div class="why-choose-us">
-            <h2>WHY <span>CHOOSE US</span></h2>
+            <h2 >WHY <span>CHOOSE US</span></h2>
             <div class="features">
                 <div class="feature">
                     <h3>EFFICIENCY:</h3>
-                    <p>Streamlined Appointment Scheduling That Fits Into Your Busy Lifestyle.</p>
+                    <p>Streamlined, fast, and hassle-free healthcare access for everyone.</p>
                 </div>
                 <div class="feature">
                     <h3>CONVENIENCE:</h3>
-                    <p>Access To A Network Of Trusted Healthcare Professionals In Your Area.</p>
+                    <p>Effortless doctor registration and appointment booking, anytime, anywhere.</p>
                 </div>
                 <div class="feature">
                     <h3>PERSONALIZATION:</h3>
-                    <p>Tailored Recommendations And Reminders To Help You Stay On Top Of Your Health.</p>
+                    <p>Customized doctor selection and scheduling for a tailored, user-focused healthcare experience.</p>
                 </div>
             </div>
         </div>
 
-        <div class="our-team">
-            <h2>OUR TEAM</h2>
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="Backend Developer">
-                    <h3>John Doe</h3>
-                    <p>Backend Developer</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="Frontend Developer">
-                    <h3>Jane Smith</h3>
-                    <p>Frontend Developer</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="SQL Developer">
-                    <h3>Mike Johnson</h3>
-                    <p>SQL Developer</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone-14-y1kSzkt4CXvhfDXTdkqvcNA9lCnEPF.png" alt="Database Administrator">
-                    <h3>Emily Brown</h3>
-                    <p>Database Administrator</p>
-                </div>
-            </div>
-        </div>
+     
     </div>
 </body>
 </html>
